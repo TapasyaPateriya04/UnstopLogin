@@ -1,6 +1,8 @@
-// App Component with Routes
-import ReactDOM from 'react-dom';
-import { Routes, BrowserRouter as Router, Route } from 'react-router-dom';
+// App.jsx
+
+import ReactDOM from 'react-dom/client';
+import './App.css'; // Import the CSS file
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import LoginPage from './components/LoginPage';
 
@@ -18,5 +20,6 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-export default App;
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement);
+root.render(<App />);
